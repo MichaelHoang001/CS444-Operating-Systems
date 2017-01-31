@@ -1,0 +1,6 @@
+	MICHAEL HOANG
+
+Consider how to add the LPT1 device (write-only) to this system. See $pcinc/lp.h for the hardware header for this device. What edit is needed for ioconf.c?  Invent function names to go in devtab and a filename for the lp driver code, corresponding to tty.c for the TTY devices.  What functions would be implemented in this new file?  You don't need to code this up unless you want to, just invent function names and file names and discuss, in lpdriver.txt.
+
+
+{n,lptinit, lptread, lptwrite, lptcontrol, 0x378,(int)&ttytab[0]},
